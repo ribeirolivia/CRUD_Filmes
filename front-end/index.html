@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmes</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+<body class="bg-dark">
+    <header>
+        <nav class="navbar navbar-dark bg-secondary">
+            <div class="container">
+                <h1 class="navbar-brand mb-0 h1 text-white">Meus filmes</h1>
+            </div>
+        </nav>
+    </header>
+    <section >
+        <form action="submit" class="row gx-3 gy-2 align-items-center">
+            <label for="" >Filme</label>
+            <input type="text" placeholder="Digite o nome do filme">
+            <label for="">Capa</label>
+            <input type="text" placeholder="Insira a URL da imagem do filme">
+            <br>
+            <label for="">Gênero</label>
+            <select name="genero" id="" >
+                <option value="primeiro">Drama</option>
+                <option value="segundo">Terror</option>
+                <option value="terceiro">Suspense</option>
+                <option value="quarto">Comédia</option>
+                <option value="quinto">Ação</option>
+                <option value="sexto">Biográficos</option>
+                <option value="setimo">Animação</option>
+                <option value="oitavo">Ficção Científica</option>
+                <option value="nono">Documentário</option>
+                <option value="decimo">Musical</option>
+                <option value="dprimeiro">Outro</option>
+            </select>
+            <label for="">Avaliação</label>
+            <select name="nota" id="">
+                <option value="nota1">1</option>
+                <option value="nota2">2</option>
+                <option value="nota3">3</option>
+                <option value="nota4">4</option>
+                <option value="nota5">5</option>
+            </select>
+            <button>Enviar</button>
+        <!--  inserir o assistido -->
+        </form>
+    </section>
+    <script src="index.js"></script>
+</body>
+</html>

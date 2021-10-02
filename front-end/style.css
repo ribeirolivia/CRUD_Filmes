@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Syne Mono', monospace;
+    
+}
+
+header{
+    
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+    font-size: 1.8rem ;
+}
+form {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 2rem;
+}
+input, select {
+    background: #FFFFFF;
+    border: 1px solid #485460;
+    box-sizing: border-box;
+    border-radius: 10px;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+}
+label{
+    font-size: 1.5rem;
+    margin: 1rem;
+    padding: auto;
+    color:#fff;
+}
+main{
+    display: flex;
+    width: 100%;
+    margin: auto;
+    margin-top: 5rem;
+}
+
+div img{
+    width: 35rem;
+    height: 20rem; 
+}
