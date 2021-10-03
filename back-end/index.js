@@ -1,26 +1,16 @@
 const express = require('express');
 const app = express();
+const cors = require('cors');
+const FilmesRouter = require('./routes/filmes.routes');
 const port = 3000;
 
-const filmes =[];
+app.use(express.json());
+app.use(cors());
+app.use('/filmes', FilmesRouter);
 
-app.get('/', (req, res) =>{
-    res.send("Bem vindo a minha página de filmes!");
-});
-
-app.get('/filmes',(req, res)=>{
+app.get('/',(req, res)=>{
     res.send(filmes);
 });
-
-app.get('/filmes/:id', (req,res)=>{
-    const id = req.params.id;
-    const filmeEscolhido = filmes.find((filmeEscolhido)=>{
-        return filmeEscolhido.id == id;
-    });
-    res.send(filmeEscolhido)
-});
-
-
 
 app.listen(port, ()=>{
     console.log(`Servidor rodando na porta http://localhost:${port}`)
