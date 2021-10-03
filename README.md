@@ -1,2 +1,2 @@
 # CRUD_Filmes
- JavaScript - Node - Express - Cors
+ JavaScript - Node Express - Cors
