@@ -66,6 +66,8 @@ main{
 
 .card{
     color: #fff;
+    margin: auto;
+    
 }
 .card h5{
     font-size: 1.7rem;

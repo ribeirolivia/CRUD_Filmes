@@ -7,8 +7,9 @@ const listaFilmes = document.getElementById("listaFilmes")
 let edicap = false;
 let idEdicao = 0;
 
-
-/* const formulario = elementoAbreForm.addEventListener('click', ()=>{
+//Apagar form do html
+const formulario = elementoAbreForm.addEventListener('click', ()=>{
+    
     form.insertAdjacentHTML("beforeend", `
     <form onsubmit="submit(event)" class="row gx-3 gy-2 align-items-center" >
             <label for="" >Filme</label>
@@ -38,11 +39,11 @@ let idEdicao = 0;
                 <option value="nota4">4</option>
                 <option value="nota5">5</option>
             </select>
-            <button>Enviar</button>
+            <button class="btn btn-outline-light">Enviar</button>
         
         </form>
     `)
-}); */
+}); 
 
 getFilmes = async () =>{
     const response = await fetch(urlApi);
