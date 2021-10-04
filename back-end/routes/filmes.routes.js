@@ -7,7 +7,7 @@ const dbFilmes = [
         nome: "Jurassic Park",
         image: "https://images-na.ssl-images-amazon.com/images/I/81VSEcW5E6L.jpg",
         genero:"Ficção Científica",
-        avaliação: "5"
+        nota: "5"
     },
 ];
 
@@ -43,7 +43,7 @@ router.post('/add', (req, res)=>{
     }
     dbFilmes.push(filme);
     res.status(200).send({
-        message: `${filme} cadastrado com sucesso!`,
+        message: `${filme.nome} cadastrado com sucesso!`,
         data: filme,
     })
     }

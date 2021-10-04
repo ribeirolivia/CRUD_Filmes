@@ -1,12 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
 * {
     padding: 0;
     margin: 0;
+    font-family: 'Quicksand', sans-serif;
 }
 
 body {
-    font-family: 'Syne Mono', monospace;
+    
     
 }
 
@@ -18,6 +19,22 @@ header{
     padding: 2rem;
     text-align: center;
     font-size: 1.8rem ;
+}
+nav{
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+nav div i{
+    list-style: none;
+    color: #fff;
+
+}
+
+section{
+    width: 20%;
+    
 }
 form {
     display: flex;
@@ -47,11 +64,38 @@ main{
     margin-top: 5rem;
 }
 
-div img{
+.card{
+    color: #fff;
+}
+.card h5{
+    font-size: 1.7rem;
+    font-weight: 800;
+}
+.card p, span,i {
+    font-size: 1.3rem;
+}
+
+.card-img{
     width: 35rem;
     height: 20rem; 
+} 
+#view{
+    color: gray;
+    cursor: pointer;
+    font-weight: 700;
+    justify-content: first baseline;
+
 }
-i{
-    font-size: 5rem;
+button{
+    background-color: transparent;
+    
+}
+button i{
     color: #fff;
+    padding: .5rem;
+}
+
+
+.itens::before {
+    content: "🟊 ";
 }
