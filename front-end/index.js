@@ -4,7 +4,7 @@ const form = document.getElementById('formulario');
 const urlApi = "http://localhost:3000/filmes";
 const listaFilmes = document.getElementById("listaFilmes")
 
-let edicap = false;
+let edicao = false;
 let idEdicao = 0;
 
 //Apagar form do html
@@ -46,7 +46,7 @@ const formulario = elementoAbreForm.addEventListener('click', () => {
 }); 
 
 
-getFilmes = async () =>{
+const getFilmes = async () => {
     const response = await fetch(urlApi);
     const data = await response.json();
     console.log(data);
@@ -71,7 +71,7 @@ getFilmes = async () =>{
 
 getFilmes();
 
-const submit = async(evento) =>{
+const submit = async(evento) => {
     evento.preventDefault();
     let nome = document.getElementById('nome');
     let image = document.getElementById('image');
@@ -106,11 +106,13 @@ const submit = async(evento) =>{
             })
     })
     const response = await fetch(request);
-        const result = await response.json()
+    const result = await response.json();
         if(result) {
+            edicao = false;
             getFilmes();
         }
     }
+
     nome.value = '';
     image.value = '';
     nota.value = 'nota1';
@@ -119,7 +121,7 @@ const submit = async(evento) =>{
     listaFilmes.innerHTML = '';
 }
 
-const filmeId = async(id) =>{
+const filmeId = async(id) => {
     const response = await fetch(`${urlApi}/${id}`);
     return filme = response.json();
 }
@@ -141,7 +143,7 @@ const editFilme = async (id) =>{
     notaEd.value = filme.nota;
 }
 
-const deleteFilme = async(id) =>{
+const deleteFilme = async(id) => {
     const request = new Request(`${urlApi}/${id}`, {
         method: 'DELETE',
     })
