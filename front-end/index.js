@@ -8,7 +8,7 @@ let edicap = false;
 let idEdicao = 0;
 
 //Apagar form do html
-const formulario = elementoAbreForm.addEventListener('click', ()=>{
+const formulario = elementoAbreForm.addEventListener('click', () => {
     
     form.insertAdjacentHTML("beforeend", `
     <form onsubmit="submit(event)" class="row gx-3 gy-2 align-items-center" >
@@ -39,11 +39,12 @@ const formulario = elementoAbreForm.addEventListener('click', ()=>{
                 <option value="nota4">4</option>
                 <option value="nota5">5</option>
             </select>
-            <button class="btn btn-outline-light">Enviar</button>
+            <button type="submit" class="btn btn-outline-light">Enviar</button>
         
         </form>
-    `)
+    `);
 }); 
+
 
 getFilmes = async () =>{
     const response = await fetch(urlApi);
@@ -73,13 +74,13 @@ getFilmes();
 const submit = async(evento) =>{
     evento.preventDefault();
     let nome = document.getElementById('nome');
-    let img = document.getElementById('img');
+    let image = document.getElementById('image');
     let nota = document.getElementById("nota");
     let genero = document.getElementById("genero");
 
     const filme = {
         nome: nome.value,
-        img: img.value,
+        image: image.value,
         genero: genero.value,
         nota: nota.value
     };
@@ -111,7 +112,7 @@ const submit = async(evento) =>{
         }
     }
     nome.value = '';
-    img.value = '';
+    image.value = '';
     nota.value = 'nota1';
     genero.value = 'primeiro';
 
@@ -130,12 +131,12 @@ const editFilme = async (id) =>{
 
     const filme = await filmeId(id);
     let nomeEd = document.getElementById('nome');
-    let imgEd = document.getElementById('img');
+    let imageEd = document.getElementById('image');
     let generoEd = document.getElementById('genero');
     let notaEd = document.getElementById('nota');
 
     nomeEd.value = filme.nome;
-    imgEd.value = filme.img;
+    imageEd.value = filme.image;
     generoEd.value = filme.genero;
     notaEd.value = filme.nota;
 }

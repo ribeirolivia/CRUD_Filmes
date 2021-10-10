@@ -8,9 +8,6 @@ app.use(express.json());
 app.use(cors());
 app.use('/filmes', FilmesRouter);
 
-app.get('/',(req, res)=>{
-    res.send(filmes);
-});
 
 app.listen(port, ()=>{
     console.log(`Servidor rodando na porta http://localhost:${port}`)
